@@ -1,10 +1,14 @@
 # Coding Standard
+
+## Purpose
 A line of code is often read many more times than it is written. A consistent style can make code more easily readable, both for yourself and others.
 
-### C# #
-* Use a tab size of 2.
+Coding standards need to be short enough that they can  be internalized by team members. They also need to be flexible enough to allow readable code in multiple situations.
+
+## C# #
+* Use tab size of 2.
 * Use spaces instead of tabs.
-* If you have a groups of similar items (fields, methods, etc.) put them in alphabetical order.
+* If groups of class members are next to each other (fields, methods, etc.) put them in alphabetical order.
 * Use PascalCase for classes, fields, and property names. This means the first letter and the first letter of each word are capitalized.
 
 ````
@@ -37,13 +41,7 @@ public void Example()
 }
 ````
 
-* Include XML tags with their contents on a single line if the contents are short enough.
-
-````
-<summary>A short summary.</summary>
-````
-
-* Do not indent multiple using directives and only include braces on the innermost level.
+* For multiple nested using directives, do not indent each directive and only include braces on the innermost level.
 
 ````
 using (var a = new ThingA())
@@ -51,4 +49,10 @@ using (var b = new ThingB())
 {
   a.Something(b);
 }
+````
+
+* Include XML tags with their contents on a single line if the contents are short enough.
+
+````
+<summary>A short summary.</summary>
 ````

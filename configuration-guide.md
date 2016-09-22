@@ -1,5 +1,7 @@
 # Configuration Guide
-This is a step-by-step setup guide for software development machines. Deploying a hard drive image is faster in the short term, but a guide allows each member of the team to better understand how their machine and IDEs work, preventing the emergence of configuration "black boxes". It also allows each member to customize things as they go.
+
+## Purpose
+The purpose of this document is a step-by-step setup guide for software development machines. In contrast to hard drive images, a guide allows each team member to understand how their machine and IDEs work, preventing the emergence of configuration "black boxes". It also allows each member to customize things as they go.
 
 ## OSX: Git Setup
 * Set git global settings.

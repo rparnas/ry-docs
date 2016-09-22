@@ -1,4 +1,9 @@
 # Design Standard
+
+## Purpose
+This purpose of this document is to capture the reasoning behind and best practices for design documents.
+
+## Overview
 Designs need to be read because changes are needed. If a software product has no bugs and needs no changes its design does not need to be read.
 
 Designs are read in the process of understanding a program because changes need to be made or what changes should be made needs to be investigated. Secondarily, writing a design early can expose problems early, avoiding costly changes later.
