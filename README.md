@@ -1,2 +1,2 @@
-# ry-docs
-A collection of reusable guides and standards for software development projects. 
+# Ry Document Series
+A collection of reusable standards and guides for software development projects.
