@@ -57,27 +57,27 @@ What is the nature of a thing? *Define*, don't *describe*.
 
 Example:
 
-> __Bad: A flater must be able to inflate and deflate messages...__
-> __Good: A flater inflates and deflates messages...__
+> __Bad: A flater must be able to inflate and deflate messages...__<br>
+__Good: A flater inflates and deflates messages...__
 
 Example:
 
-> __Bad: This layer shall also be designed to indicate...__
-> __Good: This layer also indicates the interface's connection state.__
+> __Bad: This layer shall also be designed to indicate...__<br>
+__Good: This layer also indicates the interface's connection state.__
 
 ### Rule of Opposites
 Don't write something if the opposite is nonsensical. Improper opposites often reveal inappropriate subjective commentary. The design should instead stand on its own merit.
 
 Example:
 
-> __Bad: The flater simply takes...__
-> __Bad: The flater complicatedly takes...__
-> __Good: The flater takes...__
+> __Bad: The flater simply takes...__<br>
+__Bad: The flater complicatedly takes...__<br>
+__Good: The flater takes...__
 
 Example:
-> __Bad: Using appropriate protocols, the node...__
-> __Bad: Using inappropriate protocols, the node...__
-> __Good: The node...__
+> __Bad: Using appropriate protocols, the node...__<br>
+__Bad: Using inappropriate protocols, the node...__<br>
+__Good: The node...__
 	
 ### Rule of Uncertainty
 If it can or should, will it? 
@@ -85,8 +85,8 @@ If it can or should, will it?
 If it will, when will it?
 
 Example:
-> __Bad: The node can provide quarks to upper layers.__
-> __Good: The node provides quarks to upper layers (upon request).__
+> __Bad: The node can provide quarks to upper layers.__<br>
+__Good: The node provides quarks to upper layers (upon request).__
 
 ## See Also
 * [Atwood, Jeff. "The Best Code is No Code At All". 30 May 2007](http://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
