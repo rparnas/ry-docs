@@ -47,8 +47,6 @@ Raw notes and revision history often contain design information, but they are no
 
 This is where the hall of fame comes in. At pivotal moments in your design iterations, you may choose design A over the radically different design B. Instead of deleting design B in your next iteration consider cutting it and pasting a condensed version into the hall of fame, along with a paragraph about why it was not chosen. For a UI design, this can be as simple as a few key images and a single paragraph.
 
-In general, if you
-
 ## Rules of Thumb
 These are some rules of thumb to help keep designs subjective and clear. All examples paraphrase things that have been encountered in real life.
 
