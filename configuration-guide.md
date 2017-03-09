@@ -77,7 +77,7 @@ This is valid for Windows 7, 8, 8.1 or 10.
   * Run `git config --global user.email "<Email>"`.
 * Create an ssh key for github.
   * `cd ~/.ssh`
-  * `ssh-keygen -t rsa -C "<Email>"`
+  * `ssh-keygen -t rsa -C "<Email>" -f ./id_rsa`
   * `chmod 400 ~/.ssh/id_rsa`
   * Copy the clipboard to your public key with `clip < ~/.ssh/id_rsa.pub`
   * Open your gethub user configuration and add the ssh key.
