@@ -69,17 +69,17 @@ This is valid for Windows 7, 8, 8.1 or 10.
     * `VISUAL: emacs`
     * `EDITOR: $VISUAL`
 
-### git (and Github)
+### git
 * Required packages: git, gitk, openssh
 * Set git global settings.
   * Run `git config --global user.name "<Full Name>"`.
   * Run `git config --global user.email "<Email>"`.
-* Create an ssh key for github.
+* Create an ssh key for services such as github or bitbucket.
   * `cd ~/.ssh`
   * `ssh-keygen -t rsa -C "<Email>" -f ./id_rsa`
   * `chmod 400 ~/.ssh/id_rsa`
   * Copy the clipboard to your public key with `clip < ~/.ssh/id_rsa.pub`
-  * Open your gethub user configuration and add the ssh key.
+  * Open your user configuration on your desired services and add the ssh key.
   * To make sure your ssh-agent is ready to go whenver you run Cygwin, copy the following into `~/.bash_profile`:
 
 ```
