@@ -16,7 +16,6 @@ The purpose of this document is a step-by-step setup guide for software developm
 This is valid for Windows 7, 8, 8.1 or 10.
 
 ### Create a Windows Install Disk
-* Obtain a windows setup image and a USB thumb drive.
 * Obtain a windows setup iso file and a USB thumb drive.
 * At the command prompt, run `diskpart`
   * `list disk`
