@@ -28,6 +28,7 @@ This is valid for Windows 7, 8, 8.1 or 10.
   * `exit`
 * Copy the files from the windows image to the flash drive.
 * At the command prompt run `E:\boot\bootsect.exe /nt60 E:`, replacing `E` with the drive letter of the USB disk.
+  * You may add the `/force` option if there is an issue getting exclusive access to the disk.
 
 ### Install Windows
 * Delete existing partitions through custom setup.
@@ -56,10 +57,10 @@ This is valid for Windows 7, 8, 8.1 or 10.
     * texlive-collection-latex
     * xinit
     * xorg-server 
-  * Set the following user environment variables: `HOME: %USERPROFILE%`
+  * Set the following user environment variables: `HOME: %USERPROFILE%\home`
   * Create and use the following shortcut to access bash:
   * `C:\cygwin64\bin\bash.exe --login -i`
-  * Start in `C:\Users\<User>\`
+  * Start in `C:\Users\<User>\home`
   * To clear any outputs from the startup script, you can add `printf "\033c"` to the bottom of `~/.bash_profile`.
 
 ### emacs
@@ -112,6 +113,7 @@ fi
 * To start xwin automatically on launching Cygwin, add the following to `~/.bash_profile`:
 
 ```
+# Start xwin
 if ! ps | grep /usr/bin/xwin
 then
   run xwin -multiwindow -noclipboard
