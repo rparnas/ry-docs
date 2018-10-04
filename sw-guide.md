@@ -1,7 +1,7 @@
-# IT Guide
+# Program Guide
 
 ## Purpose
-This document lists useful resources for computer maintenance.
+This document is a list of go-to software for various purposes.
 
 ## Antivirus
 * [AdwCleaner](https://www.malwarebytes.com/adwcleaner/)
