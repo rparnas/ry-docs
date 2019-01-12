@@ -52,7 +52,7 @@ The purpose of this document is a step-by-step setup guide for software developm
   * `C:\cygwin64\bin\bash.exe --login -i`
   * Start in `C:\Users\<User>\home`
   * To clear any outputs from the startup script, you can add `printf "\033c"` to the bottom of `~/.bash_profile`.
-  * In `C:\cygwin64\etc\nsswitch.conf` include the line `dbhome: windows` to ensure Cygwin uses the windows user profile as its home directory.
+  * In `C:\cygwin64\etc\nsswitch.conf` include the line `db_home: /%H/home/` to ensure Cygwin uses the windows user profile as its home directory.
 
 ### emacs
  * Required packages: emacs, emacs-w32
