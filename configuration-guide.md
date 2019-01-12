@@ -1,19 +1,9 @@
 # Configuration Guide
 
 ## Purpose
-The purpose of this document is a step-by-step setup guide for software development machines. In contrast to hard drive images, a guide allows each team member to understand how their machine and IDEs work, preventing the emergence of configuration "black boxes". It also allows each member to customize things as they go.
+The purpose of this document is a step-by-step setup guide for software development machines. In contrast to hard drive images, a guide allows each user to understand how their machine and IDEs work, preventing the emergence of configuration "black boxes". It also allows each user to customize things as they go.
 
-## OSX: Git Setup
-* Set git global settings.
-  * Run `git config --global user.name "<Full Name>"`.
-  * Run `git config --global user.email "<Email>"`.
-* Create an ssh key for github.
-  * `ssh-keygen -t rsa -C "<Email>`
-  * `eval "$(ssh-agent -s)"`
-  * `ssh-add`
-
-## Windows: OS Setup
-This is valid for Windows 7, 8, 8.1 or 10.
+## Windows Setup
 
 ### Create a Windows Install Disk
 * Obtain a windows setup iso file and a USB thumb drive.
@@ -38,7 +28,7 @@ This is valid for Windows 7, 8, 8.1 or 10.
 * Run Windows Update and get all the latest critical updates.
 * Set the correct time zone.
 
-## Windows: Cygwin
+## Cygwin Setup
 
 ### Cygwin
 * Copy the Cygwin installer `setup-x86_64.exe` to `C:\cygwin64-install\`.
@@ -62,6 +52,7 @@ This is valid for Windows 7, 8, 8.1 or 10.
   * `C:\cygwin64\bin\bash.exe --login -i`
   * Start in `C:\Users\<User>\home`
   * To clear any outputs from the startup script, you can add `printf "\033c"` to the bottom of `~/.bash_profile`.
+  * In `C:\cygwin64\etc\nsswitch.conf` include the line `dbhome: windows` to ensure Cygwin uses the windows user profile as its home directory.
 
 ### emacs
  * Required packages: emacs, emacs-w32
@@ -77,12 +68,11 @@ This is valid for Windows 7, 8, 8.1 or 10.
   * Run `git config --global user.email "<Email>"`.
 * Create an ssh key for services such as github or bitbucket.
   * `cd ~/.ssh`
-  * `ssh-keygen -t rsa -C "<Email>" -f ./id_rsa`
-  * `chmod 400 ~/.ssh/id_rsa`
-  * Copy the clipboard to your public key with `clip < ~/.ssh/id_rsa.pub`
+  * `ssh-keygen -t rsa -C "<Email>" -f id_rsa`
+  * `chmod 400 id_rsa`
+  * Copy the clipboard to your public key with `clip < id_rsa.pub`
   * Open your user configuration on your desired services and add the ssh key.
   * To make sure your ssh-agent is ready to go whenver you run Cygwin, copy the following into `~/.bash_profile`:
-
 ```
 # Start ssh-agent
 # Query the agent for available keys.
@@ -100,6 +90,7 @@ if [ "$?" == 2 ]; then
   fi
 fi
 ```
+* To test your ssh connection, use `ssh` like `ssh -vT git@github.com`
 
 ### make
 * Required packages: make
@@ -120,11 +111,11 @@ then
 fi
 ```
 
-## Windows: Unity
+## Unity Setup
 * Install Unity. It is reccomended to first install Visual Studio seperately rather than using the version that comes with the Unity installer.
 * Set the script templates under *C:\Program Files\Unity\Editor\Data\Resources\ScriptTemplates* to conform to any coding standards.
 
-## Windows: Visual Studio
+## Visual Studio Setup
 * For each visual studio you need to install, start with the oldest first.
 * It is recommended that you download a complete Visual Studio setup rather than installing from the web. To do this, acquire the web installer and run the installer with the argument `/layout`. For example: `vs_community__8b6e245420ae4e408ba8397154f28d5e.exe /layout`.
 * During the install, you will be asked to choose development settings. Choose `Visual C#`. If you forget to do this, it can be changed later by going to **Tools->Import and Export Settings...** and then choosing **Reset all settings** on the wizard.
