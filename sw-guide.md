@@ -38,10 +38,10 @@ This document is a list of go-to software for various purposes.
   1. Under *Disk Space Usage* at the bottom, click the **Delete** button.
   1. Click *Apply* and then **OK** to close the window.
 * Uninstall Programs
- 1. Go the **Control Panel**
- 1. Look in the top right corner for *View By*. If the setting is *Category* change it to **Large Icons**.
- 1. Click **Programs and Features**
- 1. There is a *Size* column for the list of installed programs. You can click on this column to sort by size.
+  1. Go the **Control Panel**
+  1. Look in the top right corner for *View By*. If the setting is *Category* change it to **Large Icons**.
+  1. Click **Programs and Features**
+  1. There is a *Size* column for the list of installed programs. You can click on this column to sort by size.
  
 
 ## Hard Drive Erasure
