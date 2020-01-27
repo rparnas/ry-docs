@@ -12,7 +12,6 @@ This document is a list of go-to software for various purposes, especially those
 ## Audio
 
 - [Audacity](https://www.audacityteam.org/) — audio editing
-- [dbpoweramp](https://www.dbpoweramp.com/) — audio encoding/transcoding
 - [Exact Audio Copy](http://www.exactaudiocopy.de/) — CD ripping
 - [Mp3tag](https://www.mp3tag.de/en/) —  metadata editor
 
