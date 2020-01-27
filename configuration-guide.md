@@ -25,11 +25,14 @@ The purpose of this document is a step-by-step setup guide for software developm
 * Choose a custom install and delete all existing partitions.
 * Choose an 'offline account' instead of a Microsoft account. This may be hidden in a corner after a 'Next' button that otherwise indicates you'd have to setup an account.
 * Set most features to 'off' when prompted unless you need a specific feature.
+
+### Setup Windows
 * Run Windows Update.
 * Set the correct time zone.
 * Disable hibernation like `powercfg -h off`.
 * Disable system restore.
 * Disable remote assistance.
+* After installing Cygwin, you may change the location of your desktop to a subdirectory of your chosen `home` directory by right-clicking a desktop shortcut to get to `Properties` and by using the `Location` tab.
 
 ## Cygwin
 
