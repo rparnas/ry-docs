@@ -5,28 +5,31 @@ The purpose of this document is a step-by-step setup guide for software developm
 
 ## Windows Setup
 
-### Create a Windows Install Disk
-* Obtain a windows setup iso file and a USB thumb drive.
+### Create Windows Install Media
+* Obtain a windows setup iso and a flash drive.
 * At the command prompt, run `diskpart`
   * `list disk`
-  * `select disk 2` replacing `2` with the index of the USB thumb drive.
+  * `select disk #` replacing `#` with the index of the USB flash drive.
   * `clean`
   * `create partition primary`
   * `select partition 1`
   * `format fs=ntfs quick`
   * `assign`
   * `exit`
-* Copy the files from the windows image to the flash drive.
-* At the command prompt run `E:\boot\bootsect.exe /nt60 E:`, replacing `E` with the drive letter of the USB disk.
-  * You may add the `/force` option if there is an issue getting exclusive access to the disk.
+* Copy the files from the windows iso to the flash drive.
+* At command prompt run `X:\boot\bootsect.exe /nt60 X:`, replacing `X` with the drive letter of the flash drive.
+  * You may run the above command with the `/force` flag if there is an issue getting exclusive access to drive.
 
 ### Install Windows
-* Delete existing partitions through custom setup.
-* Do not use express settings. Use customized settings.
-  * Click no for discovering devices. Set every setting to off except for the do not track cookie and windows update.
-* When you get to setting up your Microsoft account, click create a new account. From there, you should be able to find a button letting you create a local account only.
-* Run Windows Update and get all the latest critical updates.
+* If you are re-installing Windows on the same machine, you can skip entering a product key.
+* Choose a custom install and delete all existing partitions.
+* Choose an 'offline account' instead of a Microsoft account. This may be hidden in a corner after a 'Next' button that otherwise indicates you'd have to setup an account.
+* Set most features to 'off' when prompted unless you need a specific feature.
+* Run Windows Update.
 * Set the correct time zone.
+* Disable hibernation like `powercfg -h off`.
+* Disable system restore.
+* Disable remote assistance.
 
 ## Cygwin Setup
 
