@@ -1,4 +1,4 @@
-# Program Guide
+# Windows Guide
 
 ## Purpose
 Tips for using Windows.
