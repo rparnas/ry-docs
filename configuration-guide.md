@@ -3,7 +3,7 @@
 ## Purpose
 The purpose of this document is a step-by-step setup guide for software development machines. In contrast to hard drive images, a guide allows each user to understand how their machine and IDEs work, preventing the emergence of configuration "black boxes". It also allows each user to customize things as they go.
 
-## Windows Setup
+## Windows
 
 ### Create Windows Install Media
 * Obtain a windows setup iso and a flash drive.
@@ -31,35 +31,25 @@ The purpose of this document is a step-by-step setup guide for software developm
 * Disable system restore.
 * Disable remote assistance.
 
-## Cygwin Setup
+## Cygwin
 
 ### Cygwin
 * Copy the Cygwin installer `setup-x86_64.exe` to `C:\cygwin64-install\`.
 * Run `setup-x86_64.exe`.
-  * Choose to install from the internet.
-  * Leave the root directory as `C:\cygwin64\`.
-  * Set the local package directory to `C:\cygwin64-install\`.
-  * Choose your packages. This document recommends the following, and you can read ahead to see what they are used for. You can always change your packages later if needed.
-    * emacs
-    * emacs-w32
-    * git
-    * gitk
-    * make
-    * openssh
-    * texlive
-    * texlive-collection-latex
-    * xinit
-    * xorg-server 
+  * Choose `Install from Internet`.
+  * Leave the root directory `C:\cygwin64\`.
+  * Leave the package directory as `C:\cygwin64-install\`.
+  * Choose your packages. **Look ahead in this document to see packages you may need**.
   * Set the following user environment variables: `HOME: %USERPROFILE%\home`
   * Create and use the following shortcut to access bash:
-  * `C:\cygwin64\bin\bash.exe --login -i`
-  * Start in `C:\Users\<User>\home`
+    * `C:\cygwin64\bin\bash.exe --login -i`
+    * Start in `C:\Users\<User>\home`
+    * You may want to use one of the icons at `C:\cygwin64\`
   * To clear any outputs from the startup script, you can add `printf "\033c"` to the bottom of `~/.bash_profile`.
   * In `C:\cygwin64\etc\nsswitch.conf` include the line `db_home: /%H/home/` to ensure Cygwin uses the windows user profile as its home directory.
 
 ### emacs
  * Required packages: emacs, emacs-w32
-  * Run `git config --global core.editor "emacs"`
   * Set the following user environment variables:
     * `VISUAL: emacs`
     * `EDITOR: $VISUAL`
@@ -67,6 +57,7 @@ The purpose of this document is a step-by-step setup guide for software developm
 ### git
 * Required packages: git, gitk, openssh
 * Set git global settings.
+  * Run `git config --global core.editor "emacs"`
   * Run `git config --global user.name "<Full Name>"`.
   * Run `git config --global user.email "<Email>"`.
 * Create an ssh key for services such as github or bitbucket.
@@ -114,14 +105,9 @@ then
 fi
 ```
 
-## Unity Setup
-* Install Unity. It is reccomended to first install Visual Studio seperately rather than using the version that comes with the Unity installer.
-* Set the script templates under *C:\Program Files\Unity\Editor\Data\Resources\ScriptTemplates* to conform to any coding standards.
-
-## Visual Studio Setup
-* For each visual studio you need to install, start with the oldest first.
-* It is recommended that you download a complete Visual Studio setup rather than installing from the web. To do this, acquire the web installer and run the installer with the argument `/layout`. For example: `vs_community__8b6e245420ae4e408ba8397154f28d5e.exe /layout`.
-* During the install, you will be asked to choose development settings. Choose `Visual C#`. If you forget to do this, it can be changed later by going to **Tools->Import and Export Settings...** and then choosing **Reset all settings** on the wizard.
+## Visual Studio
+* Download the Visual Studio Community installer from https://visualstudio.microsoft.com/downloads/
+* When first running Visual Studio you will be asked to choose `Development Settings`. Choose `Visual C#`. If you need to change this later you can go to **Tools->Import and Export Settings...** and then choose **Reset all settings** on the wizard.
 * In Visual Studio, set the following options under **Tools->Options**: 
   * Under **Environment->Documents** check **Reload modified files unless there are unsaved changes**
   * Under **Tools->Options->Text Editor->All Languages->Tabs** choose
@@ -130,4 +116,4 @@ fi
     * **Indent size**: 2
     * Check **Insert Spaces**. 
 * If you have trouble with line endings, download and install [Strip 'em](http://www.grebulon.com/software/stripem.php) to automatically normalize line endings in Visual Studio whenever a file is saved.
-* If using a recent version of Visual Studio, make sure to log into an appropriate Microsoft account.
+* Log into an appropriate Microsoft account.
