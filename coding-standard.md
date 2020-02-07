@@ -21,7 +21,7 @@ public int PropertyName { get; set; }
 ````
 public int PropertyName
 {
-  get { return _PropertyName;  }
+  get => _PropertyName;
   set 
   { 
     _PropertyName = value; 
@@ -51,7 +51,15 @@ using (var b = new ThingB())
 }
 ````
 
-* Include XML tags with their contents on a single line if the contents are short enough.
+* For multiple LINQ statements, use a fluent style with one statement per line like
+````
+var list = inputItems
+  .Select(item => item.Name)
+  .Where(itemName => !string.IsNullOrWhitespace(itemName))
+  .ToList();
+````
+
+* Include XML tags with their contents on a single line if the contents are only one line.
 
 ````
 <summary>A short summary.</summary>
