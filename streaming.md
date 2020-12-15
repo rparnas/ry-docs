@@ -42,5 +42,5 @@ This setup should be used with a reasonably fast computer or with a video card t
     
 ### Additional Setup to Host the Stream and Engage in the Stream as a Participant from One Computer 
 * To speak on the stream add your microphone to the OBS Studio audio mixer. Under the *Audio Properties*, under the *Monitor* column, choose *Monitor Only* for this device.
-* TODO: How to listen to the audio of the video being streamed (without also hearing your own microphone).
+* **TODO: How to listen to the audio of the video being streamed (without also hearing your own microphone).**
 * To view the streamed video in full-screen, right-click on the video preview in OBS Studio and choose *Full Screen Projector (Preview)*.
