@@ -3,7 +3,7 @@
 ## Video Streaming
 Streaming using a virtual webcam has an advantage in video quality, video and audio stability and bandwidth required (as opposed to streaming using screen share). On Discord the most notable limiting factor is likely to be audio quality, which seems to be very limited by server boost level. However, as long as voice-specific audio processing is turned off, the audio does not seem worse than from screen share.
 
-When using a virtual webcam to stream you may wish to stream from one computer while joining the stream as a participant from another computer. Note that in Discord and many other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
+When using a virtual webcam to stream you may wish to stream from one computer while joining the stream as a participant from another computer. Otherwise see the steps below to do everything on the same machine. Note that in Discord and many other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
 
 ### Setup Virtual Audio
 * A virtual audio input device is required to pass along the audio from a virtual OBS-based webcam to Discord. This is because Discord can only take audio from devices listed explicitly under *Control Panel \ Sound \ Recording*.
@@ -19,7 +19,7 @@ When using a virtual webcam to stream you may wish to stream from one computer w
 * In OBS Studio, right-click the *Sources* list and choose *Add > VLC Video Source*. 
   * Choose the settings from the VLC Video Source as desired, including adding the video files to be streamed to the playlist. The playlist and other settings can be changed at any time by double-clicking on the source in the sources list.
 * Under *File > Settings* on the *Audio* tab, ensure that *Advanced \ Monitoring Device* is set to the VB-Audio device.
-* Right-click the *Audio Mixers* and choose  *Advanced Audio Properties*. Ensure that under the *Monitoring* column, the VLC audio source is set to either *Monitor Only* or *Monitor and Output* depending on whether you want to send the audio to the monitor only or if you also want to listen to the audio from your VLC source directly from OBS.
+* Right-click the *Audio Mixers* and choose  *Advanced Audio Properties*. Ensure that under the *Monitoring* column, the VLC audio source is set to *Monitor Only*.
 * On the *Audio Mixers* list you may wish to disable other audio sources.
 * On the Video Preview, you should right-click the VLC video feed and choose *Resize output (source size)*.
 * When you are ready to stream click *Start Virtual Camera* under *Controls* in the main window.
@@ -39,6 +39,6 @@ When using a virtual webcam to stream you may wish to stream from one computer w
     * Automatic Gain Control
     
 ### Additional Setup to Host the Stream and Engage in the Stream as a Participant from One Computer 
-* To speak on the stream add your microphone to the OBS Studio audio mixer.
+* To speak on the stream add your microphone to the OBS Studio audio mixer. Under the *Audio Properties*, under the *Monitor* column, choose *Monitor Only* for this device.
 * TODO: How to listen to the audio of the video being streamed (without also hearing your own microphone).
-* TODO: Best method to watch the video being streamed (without it being horizontally flipped)
+* To view the streamed video in full-screen, right-click on the video preview in OBS Studio and choose *Full Screen Projector (Preview)*.
