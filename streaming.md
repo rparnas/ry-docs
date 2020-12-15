@@ -9,8 +9,6 @@ If using the virtual webcam to stream to Discord the reamaining issues are:
   * **TODO: Determine if this is actually an issue with the stream participant**.
   * **TODO: Try re-encoding the source material to a lower resolution**.
 
-The above issues could perhaps be addressed with an alternative streaming/host chat application. Or you could host the stream software itself (instead of sending it to a web conferencing app). This would require enough upload bandwidth to multiplex the stream to all participants with a rough estimate being 3 Mbps per person.
-
 When using a virtual webcam to stream you may wish to stream from one computer while joining the stream as a participant from another computer (especially for the inconvienece of changing voice settings back if you switch to using discord directly for microphone audio again). Otherwise see the steps below to do everything on the same machine. Note that in Discord and many other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
 
 ### Setup Virtual Audio
