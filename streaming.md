@@ -5,6 +5,8 @@ Streaming using a virtual webcam has an advantage in video quality, video and au
 
 When using a virtual webcam to stream you may wish to stream from one computer while joining the stream as a participant from another computer. Otherwise see the steps below to do everything on the same machine. Note that in Discord and many other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
 
+This setup should be used with a reasonably fast computer or with a video card that supports hardware video encoding in VBS.
+
 ### Setup Virtual Audio
 * A virtual audio input device is required to pass along the audio from a virtual OBS-based webcam to Discord. This is because Discord can only take audio from devices listed explicitly under *Control Panel \ Sound \ Recording*.
 * Download the [VB-CABLE Virtual Audio Device](https://vb-audio.com/Cable/) and run the installer as an administrator.
