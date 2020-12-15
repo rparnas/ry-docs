@@ -1,11 +1,11 @@
 # Streaming
 
-## Video Streaming to a Web Conferencing App
-Streaming using a virtual webcam has an advantage in video quality, video and audio stability and bandwidth required (as opposed to streaming using screen share). This setup should be used a video card that supports hardware video encoding in OBS.
+## Video Streaming via Virtual Webcam
+Streaming using an virtual webcam has an advantage in video quality, video and audio stability and bandwidth required (as opposed to streaming using screen share). This setup should be used a video card that supports hardware video encoding in OBS.
 
 If using the virtual webcam to stream to Discord the reamaining issues are:
 * Audio quality. This seems to be very limited except perhaps on high server boost levels. However, as long as voice-specific audio processing is turned off, the audio does not seem worse than with Discord screen share.
-* Video picture quality is very good, but the number of frames being shown still appears lower than the original material, giving it a low frame rate look. **TODO: Determine if this is actually an issue with the stream participant**.
+* Video picture quality is very good, but the number of frames being shown still appears lower than the original. This seems to give it a subtle low frame rate look for live-action material and is much less noticible for animated material. Decreasing the resolution of the output stream in OBS does not help. **TODO: Determine if this is actually an issue with the stream participant**.
 
 The above issues could perhaps be addressed with an alternative streaming/host chat application. Or you could host the stream software itself (instead of sending it to a web conferencing app). This would require enough upload bandwidth to multiplex the stream to all participants.
 
