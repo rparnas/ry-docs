@@ -1,6 +1,6 @@
 # Streaming
 
-## Video Streaming via Virtual Webcam
+## Method 1: VLC -> OBS -> VB-CABLE -> Discord
 Streaming using an virtual webcam has an advantage in video quality, video and audio stability and bandwidth required (as opposed to streaming using screen share). This setup should be used a video card that supports hardware video encoding in OBS.
 
 If using the virtual webcam to stream to Discord the reamaining issues are:
