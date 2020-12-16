@@ -53,4 +53,4 @@ When using a virtual webcam to stream you may wish to stream from one computer w
 * Many seem to be using nginx as the web server, and almost always on Unix.
 * The OBS feed as sent to Discord is < 3 Mpbs, so 3-4 Mpbs per person might be a reasonable estimate of upload bandwidth required.
 * The standard Charter Spectrum plan is 100 Mpbs download / 10 Mpbs upload, but a 200/20 plan looks to be available to most consumers.
-* Instead of a "live-streaming" solution could use a similar tech pipeline to deliver known-ahead-of-time video content allowing the web browser to pre-cache. A syncing solution would need to be added on top. 
+* Instead of a "live-streaming" solution could use a similar tech pipeline to deliver known-ahead-of-time video content allowing the web browser to pre-cache. A syncing solution would likely need to be custom-implemented on top.
