@@ -4,8 +4,8 @@
 Streaming using an virtual webcam has an advantage in video quality, video and audio stability and bandwidth required (as opposed to streaming using screen share). This setup should be used a video card that supports hardware video encoding in OBS.
 
 If using the virtual webcam to stream to Discord the reamaining issues are:
-* Audio quality. This seems to be very limited except perhaps on high server boost levels. However, as long as voice-specific audio processing is turned off, the audio does not seem worse than with Discord screen share.
-* Video picture quality is very good, but the number of frames being shown still appears lower than the original for some material. This seems to give it a subtle low frame rate look for recent high-quality live-action material and close to un-noticable for clean animated material. Decreasing the resolution of the output stream in OBS does not help. 
+* Audio quality is low even at modest paid 'boost levels'.
+* Video quality is very good but the number of frames being shown still appears lower than the original giving a subtle low-framerate look". As changing OBS to lower output resolutions doesn't seem to help, this may be Discord-dependant as well.
 
 When using a virtual webcam to stream you may wish to stream from one computer while joining the stream as a participant from another computer (especially for the inconvienece of changing voice settings back if you switch to using discord directly for microphone audio again). Otherwise see the steps below to do everything on the same machine. Note that in Discord and many other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
 
