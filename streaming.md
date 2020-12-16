@@ -48,7 +48,7 @@ When using a virtual webcam to stream you may wish to stream from one computer w
 * To view the streamed video in full-screen, right-click on the video preview in OBS Studio and choose *Full Screen Projector (Preview)*.
 
 ## Method 2: ? -> Web Server -> Web Browser
-* Need to look into what [video streaming protocol](https://www.wowza.com/blog/streaming-protocols). 
+* Need to look into what [video streaming protocol](https://www.wowza.com/blog/streaming-protocols). Most protocols are not natively implemented by browsers and require a JavaScript video library to decode on the client side.
 * Would probably be nice to continue using OBS Studio for its versitility. It only seems to support RTMP.
 * Many seem to be using nginx as the web server, and almost always on Unix.
 * The OBS feed as sent to Discord is < 3 Mpbs, so 3-4 Mpbs per person might be a reasonable estimate of upload bandwidth required.
