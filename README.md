@@ -1,2 +1,2 @@
 # Ry Docs
-Guides, notes, and standards for software development.
+Miscellaneous guides and notes.
