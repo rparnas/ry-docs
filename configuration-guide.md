@@ -23,16 +23,18 @@ The purpose of this document is a step-by-step setup guide for software developm
 ### Install Windows
 * If you are re-installing Windows on the same machine, you can skip entering a product key.
 * Choose a custom install and delete all existing partitions.
-* Choose an 'offline account' instead of a Microsoft account. This may be hidden in a corner after a 'Next' button that otherwise indicates you'd have to setup an account.
 * Set most features to 'off' when prompted unless you need a specific feature.
+* Windows Setup may require you to log in with a Microsoft account.
 
 ### Setup Windows
+* If you have the Pro edition of Windows, you may convert the system's Microsoft account-linked login to a local account. If you do this, you may want to create a second local account and delete the original one in order to exactly specify both the account's username and path on disk (e.g. if you want a login with a three-letter username and matching file path).
+* You might create a folder at '%userprofile%\home' which is usually 'C:\Users\<username>\home' to be your `home` folder as opposed to using the user profile directly. This allows you to backup your home folder without backing up whatever junk various Windows programs tend to put in your user profile.
+* If using a custom home directory you may move your Desktop folder to be a subdirectory of home by right-clicking on 'Desktop' in File Explorer, selecting 'Properties', and navigating to the 'Location' tab.
 * Run Windows Update.
 * Set the correct time zone.
 * Disable hibernation like `powercfg -h off`.
 * Disable system restore.
 * Disable remote assistance.
-* After installing Cygwin, you may change the location of your desktop to a subdirectory of your chosen `home` directory by right-clicking a desktop shortcut to get to `Properties` and by using the `Location` tab.
 
 ## Cygwin
 
