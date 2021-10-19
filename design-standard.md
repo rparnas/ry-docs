@@ -78,6 +78,11 @@ Example:
 > __Bad: Using appropriate protocols, the node...__<br>
 __Bad: Using inappropriate protocols, the node...__<br>
 __Good: The node...__
+
+Example:
+> __Bad: The packet is rejected entirely.__<br>
+__Bad: The packet is rejected partially.__<br>
+__Good: The packet is rejected.__
 	
 ### Rule of Uncertainty
 If it can or should, will it? 
