@@ -27,6 +27,7 @@ This document is a list of go-to software for various purposes, especially those
 
 - [7-Zip](https://www.7-zip.org/) — compression/decompression
 - [Beyond Compare](https://www.scootersoftware.com/) — file and director comparison (trialware)
+- [CDBurnerXP](https://cdburnerxp.se/) - CD and DVD burning software
 - [Renamer](https://www.den4b.com/products/renamer) — file renaming (freemium)
 - [WinCDEmu](https://wincdemu.sysprogs.org/) —  CUE, NRG, MDS/MDF, CCD mounting
 
