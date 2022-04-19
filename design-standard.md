@@ -61,7 +61,7 @@ Example:
 __Good: This layer also indicates the interface's connection state.__
 
 ### Rule of Opposites
-If the opposite of a statement doesn't sound right this often indicates that the original statement includes inappropriate subjective commentary. If commentary is truly needed it should be seperated out.
+If the opposite of a statement doesn't sound right this often indicates that the original statement is making inappropriate subjective commentary. If this commentary is truly needed it should be separated out.
 
 Example:
 
