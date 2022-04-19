@@ -27,7 +27,7 @@ When you encounter a difficulty, firstly consider if it stems from the **inheren
 
 Next, consider if a difficulty stems from **a clear gap or flaw in the software's solution to the problem.** If so, try using design writing to fill in or iterate on the current design. After all, if you can't explain the design even to yourself how will you ever implement it? How will users ever understand it?
 
-If the issue doesn't fall under a category suited to working through via design writing consider prototyping instead. Perhaps you have reached a roadblock in undertsanding the problem space that would be better explored through experimentation. Or perhaps the design is clear but it is unclear whether it would actually work. However, if the design you have written isn't holding your hand through the difficulties you encounter during implementation, this can be a sign you haven't though through the design itself far enough yet.
+If the issue doesn't fall under a category suited to working through via design writing consider prototyping instead. Perhaps you have reached a roadblock in undertsanding the problem space that would be better explored through experimentation. Or perhaps the design is clear but it is unclear whether it would actually work. However, if the design you have written isn't holding your hand through, or at least justifying, the difficult parts of implementation, this can be a sign you haven't though through the design itself far enough yet.
 
 ## Format
 
