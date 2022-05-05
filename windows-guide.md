@@ -11,7 +11,7 @@ Tips for using Windows.
   make sure you are cleaning up as much as possible. If the button is not there, move to the next step.
   1. Check what you want to clean up. *Do not* check any option in the list that says *Compress* but
   generally check everything else. One finished, click **K**
-  1. At *Are you sure you want to peremantely delete these files?* click **Delete Files**.
+  1. At *Are you sure you want to permanently delete these files?* click **Delete Files**.
   1. The delete files progress bar will apear. This may tens of minutes (or longer) if there is a large
   amount of things to clean up, especially "Windows Update Cleanup".
 * Disable Hiberation
