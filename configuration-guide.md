@@ -33,11 +33,17 @@ The purpose of this document is a step-by-step setup guide for software developm
   * Leave the package directory as `C:\cygwin64-install\`.
   * Choose your packages. **Look ahead in this document to see packages you may need**.
   * Set the following user environment variables: `HOME: %USERPROFILE%\home`
-  * **TODO**
-  * Create and use the following shortcut to access bash:
-    * `C:\cygwin64\bin\bash.exe --login -i`
-    * Start in `C:\Users\<User>\home`
-    * You may want to use one of the icons at `C:\cygwin64\`
+  * Ensure `Terminal` is set as the default terminal application
+    - Open `Terminal`
+    - Go to `Settings`
+    - Under "Default Terminal Application" set "Windows Terminal"
+  * Add a profile for cygwin
+    - Open `Terminal` and click `Add a new profile`
+    - Create a new empty profile
+    - Set the name to "Cygwin"
+    - Set the command line to `C:\cygwin64\bin\bash.exe --login -i`
+    - Set the starting directory `%USERPROFILE%`
+    - You may want to use one of the icons at `C:\cygwin64\`
   * To clear any outputs from the startup script, you can add `printf "\033c"` to the bottom of `~/.bash_profile`.
   * In `C:\cygwin64\etc\nsswitch.conf` include the line `db_home: /%H/home/` to ensure Cygwin uses the windows user profile as its home directory.
 
