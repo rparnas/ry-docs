@@ -49,7 +49,7 @@ The purpose of this document is a step-by-step setup guide for software developm
     - Create a new empty profile
     - Set the name to "Cygwin"
     - Set the command line to `C:\cygwin64\bin\bash.exe --login -i`
-    - Set the starting directory `%USERPROFILE%`
+    - Set the starting directory `%USERPROFILE%\home`
     - You may want to use one of the icons at `C:\cygwin64\`
   * To clear any outputs from the startup script, you can add `printf "\033c"` to the bottom of `~/.bash_profile`.
   * In `C:\cygwin64\etc\nsswitch.conf` include the line `db_home: /%H/home/` to ensure Cygwin uses the windows user profile as its home directory.
