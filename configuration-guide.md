@@ -23,6 +23,13 @@ The purpose of this document is a step-by-step setup guide for software developm
 * Disable system restore.
 * Disable remote assistance.
 
+## Setup Boot Menu
+* If you are installing multiple OS, you can manipulate the boot menu with `bcedit`.
+* `bcedit /set {name} description "Description" sets the description
+* `bcedit /displayorder {name0} {name1}` sets the menu order
+* `bcedit /default {name0}` sets the default entry
+* `bcedit /timeout <seconds>` sets how long to wait before the boot manager selects the default entry.
+
 ## Cygwin
 
 ### Cygwin
