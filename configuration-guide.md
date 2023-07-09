@@ -1,35 +1,22 @@
 # Configuration Guide
 
 ## Purpose
-The purpose of this document is a step-by-step setup guide for software development machines. In contrast to hard drive images, a guide allows each user to understand how their machine and IDEs work, preventing the emergence of configuration "black boxes". It also allows each user to customize things as they go.
+The purpose of this document is a step-by-step setup guide for software development machines. In contrast to hard drive images, a guide allows each user to understand how their machine and IDEs are setup, preventing the emergence of configuration "black boxes". It also allows each user to customize things as they go.
 
 ## Windows
 
 ### Create Windows Install Media
-* Obtain a windows setup iso and a flash drive.
-* At the command prompt, run `diskpart`
-  * `list disk`
-  * `select disk #` replacing `#` with the index of the USB flash drive.
-  * `clean`
-  * `create partition primary`
-  * `select partition 1`
-  * `format fs=ntfs quick`
-  * `assign`
-  * `exit`
-* Copy the files from the windows iso to the flash drive.
-* At command prompt run `X:\boot\bootsect.exe /nt60 X:`, replacing `X` with the drive letter of the flash drive.
-  * You may run the above command with the `/force` flag if there is an issue getting exclusive access to drive.
+* Download the latest Windows Media Creation Tool and use it to set up a bootable USB drive.
 
 ### Install Windows
-* If you are re-installing Windows on the same machine, you can skip entering a product key.
 * Choose a custom install and delete all existing partitions.
 * Set most features to 'off' when prompted unless you need a specific feature.
-* Windows Setup may require you to log in with a Microsoft account.
+* Windows Setup will require you to login with a Microsoft account.
 
 ### Setup Windows
-* If you have the Pro edition of Windows, you may convert the system's Microsoft account-linked login to a local account. If you do this, you may want to create a second local account and delete the original one in order to exactly specify both the account's username and path on disk (e.g. if you want a login with a three-letter username and matching file path).
-* You might create a folder at '%userprofile%\home' which is usually 'C:\Users\<username>\home' to be your `home` folder as opposed to using the user profile directly. This allows you to backup your home folder without backing up whatever junk various Windows programs tend to put in your user profile.
-* If using a custom home directory you may move your Desktop folder to be a subdirectory of home by right-clicking on 'Desktop' in File Explorer, selecting 'Properties', and navigating to the 'Location' tab.
+* If you wish to log into the system with a local account, rather than the default Microsoft account linked account, create a local account then delete the linked account.
+* You may create a folder at `%userprofile%\home` which is usually `C:\Users\<username>\home` to be your `home` folder as opposed to using the user profile directly. This allows you to backup your home folder leaving out the junk various Windows programs tend to accumulate and place in the user folder.
+* If using a custom home directory you may want to move the Desktop folder to be a subdirectory of home. Righ-click on `Desktop` in File Explorer and select `Properties`. You may move the Desktop's location on the `Location` tab.
 * Run Windows Update.
 * Set the correct time zone.
 * Disable hibernation like `powercfg -h off`.
@@ -46,6 +33,7 @@ The purpose of this document is a step-by-step setup guide for software developm
   * Leave the package directory as `C:\cygwin64-install\`.
   * Choose your packages. **Look ahead in this document to see packages you may need**.
   * Set the following user environment variables: `HOME: %USERPROFILE%\home`
+  * **TODO**
   * Create and use the following shortcut to access bash:
     * `C:\cygwin64\bin\bash.exe --login -i`
     * Start in `C:\Users\<User>\home`
