@@ -13,11 +13,12 @@ This document is a list of go-to software for various purposes, especially those
 
 - [Audacity](https://www.audacityteam.org/) — audio editing
 - [Exact Audio Copy](http://www.exactaudiocopy.de/) — CD ripping
-- [Mp3tag](https://www.mp3tag.de/en/) —  metadata editor
+- [Mp3tag](https://www.mp3tag.de/en/) — metadata editor
 
 ## Disk Utilities
 
-* [Eraser](https://eraser.heidi.ie/)
+- [Eraser](https://eraser.heidi.ie/) — disk eraser for HDD (for SSD, see the manufacturer's secure erase tool or another method)
+  - arbitrarily, I have used `US DoD 5220.22-M (8-306./E) (3-pass)`
 
 ## Editors
 
