@@ -17,9 +17,9 @@ This document is a list of go-to software for various purposes, especially those
 
 ## Disk Utilities
 
-- [Eraser](https://eraser.heidi.ie/) — disk eraser for HDD (for SSD, see the manufacturer's secure erase tool or another method)
+- [Eraser](https://eraser.heidi.ie/) — disk eraser for HDD
   - arbitrarily, I have used `US DoD 5220.22-M (8-306./E) (3-pass)`
-- [Samsung Magician](https://semiconductor.samsung.com/us/consumer-storage/magician/) — disk utilities, including secure erase, for Samsung SSDs
+- [Samsung Magician](https://semiconductor.samsung.com/us/consumer-storage/magician/) — disk utilities for Samsung SSDs
 
 ## Editors
 
