@@ -1,9 +1,9 @@
 # Coding Standard
 
 ## Purpose
-A line of code is often read many more times than it is written. A consistent style can make code more easily readable, both for yourself and others.
+A line of code is read many more times than it is written. A consistent style makes code more readable, both for others and yourself in the future.
 
-Coding standards need to be short enough that they can  be internalized by team members. They also need to be flexible enough to allow readable code in multiple situations.
+Coding standards need to be short enough that they can be internalized by team members. They also need to be flexible enough to allow readable code in complex situations.
 
 ## C# #
 * Use tab size of 2.
@@ -16,7 +16,7 @@ public int FieldName;
 public int PropertyName { get; set; }
 ````
 
-* If you must use a backing field for a property, prefix the names with an underscore. 
+* If you must use a backing field for a property, prefix the backing field's name with an underscore. 
 
 ````
 public int PropertyName
@@ -41,7 +41,7 @@ public void Example()
 }
 ````
 
-* For multiple nested using directives, do not indent each directive and only include braces on the innermost level.
+* For multiple nested using directives, do not indent each directive and include braces only on the innermost level.
 
 ````
 using (var a = new ThingA())
@@ -59,7 +59,7 @@ var list = inputItems
   .ToList();
 ````
 
-* Include XML tags with their contents on a single line if the contents are only one line.
+* Include XML tags with their contents on a single line if the contents are short.
 
 ````
 <summary>A short summary.</summary>
