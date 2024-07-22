@@ -22,6 +22,7 @@ This document is a list of go-to software for various purposes, especially those
 * [Eraser](https://eraser.heidi.ie/) — eraser for HDD
   - arbitrarily, I use `US DoD 5220.22-M (8-306./E) (3-pass)`
 * [Samsung Magician](https://semiconductor.samsung.com/us/consumer-storage/magician/) — utilities for Samsung SSDs
+* [Space Monger](https://archive.org/details/spcmn140_zip) — disk space usage visualization
 
 ## File
 
