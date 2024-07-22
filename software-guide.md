@@ -39,7 +39,7 @@ This document is a list of go-to software for various purposes, especially those
 
 ## Text
 
-* [Typora](https://www.typora.io/) — WYSIWYG markdown editor
+* [Typora](https://www.typora.io/) — WYSIWYG markdown editor (trialware)
 
 ## Video
 
