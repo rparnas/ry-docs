@@ -45,7 +45,7 @@ The purpose of this document is a step-by-step setup guide for software developm
     - Go to `Settings`
     - Under "Default Terminal Application" set "Windows Terminal"
   * Add a profile for cygwin
-    - Open `Terminal` and click `Add a new profile`
+    - Open `Terminal`, go to `Settings` and click `Add a new profile`
     - Create a new empty profile
     - Set the name to "Cygwin"
     - Set the command line to `C:\cygwin64\bin\bash.exe --login -i`
