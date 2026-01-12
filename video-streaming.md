@@ -20,12 +20,12 @@ This method is useful if you have enough bandwidth to directly host a stream to 
 
 ### Step 2: Setup SRS (Simple Realtime Server)
 * This uses *WebRTC for Live Streaming* as described by the SRS *Getting Started* guide: https://ossrs.net/lts/en-us/docs/v6/doc/getting-started
-* Run SRS like this, using the LAN IP address of your machine (this can be obtained from `ipconfig` in Windows).
+* Run SRS like this, replacing `<LAN-IP>` with your LAN IP address (this can be obtained from `ipconfig` in Windows or from your router's admin page).
 ```
 CANDIDATE="<LAN-IP>"
 docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 \
     --env CANDIDATE=$CANDIDATE -p 8000:8000/udp \
-	   ossrs/srs:5 ./objs/srs -c conf/rtmp2rtc.conf
+	ossrs/srs:5 ./objs/srs -c conf/rtmp2rtc.conf
 ```
 
 ### Step 3: Setup Port-forwarding
@@ -61,7 +61,7 @@ Using this method, any remaining quality bottlenecks seems to be dependent on th
 
 When using a virtual webcam to stream, you may wish to stream from one computer while joining the stream as a participant from another computer (especially given the inconvenience of having to change chat application settings when switching from streaming back to everyday usage). Otherwise, see some workarounds below to do everything on the same machine. 
 
-Note that in Discord, Zoom and many other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
+In Discord, Zoom and other conferencing applications, the video preview of the OBS virtual webcam will be horizontally flipped on the local machine only.
 
 ### Step 1: Setup VB-Cable
 * A virtual audio input device is required to pass along the audio from the virtual OBS-based webcam. This is because many communication applications can only take audio from devices listed explicitly under *Control Panel \ Sound \ Recording*.
