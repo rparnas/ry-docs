@@ -42,6 +42,9 @@ This document is a list of go-to software for various purposes, especially those
 
 * [Typora](https://www.typora.io/) — WYSIWYG markdown editor (trialware)
 
+## Utilities
+* [emn178 Online Tools](https://emn178.github.io/online-tools/) — Quick online tools for hashing, encoding, encryption, formatting etc.
+
 ## Video
 
 * [Aegisub](http://www.aegisub.org/) — subtitle editing
