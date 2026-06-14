@@ -29,24 +29,18 @@ Keep your **whys** concise. An hour of discussion should often only generate a s
 
 ## When should designs be written
 
-Writing down your design information tests your design in ways that leaving your design information in a raw format, or no format at all, does not. This is because design writing forces you to think about how you would explain and justify your design to persons external to the project, a new team member, or a user.
+A design document can often start out small. Discussions, meetings, and other group activities often generate design decisions early in the life of a feature. Document design information as it comes up. Otherwise it will tend to accumulate in meeting minutes, notes, and people's heads, where it can be costly to extract later.
 
-For group activities, such as discussions and meetings, it is useful to start the project with at least a very brief sketch of the design in a design document. Group activities tend to generate high-level design decisions and design insights and it is useful to capture them in the design document as you go. Otherwise they tend to accumulate in raw meeting minutes, notes, or in peoples' heads, and can be costly to extract later. Be on the lookout for activities that generate "design". For example, if you attend a meeting that generates a couple pages of minutes or notes, perhaps afterwards you should capture the design information by writing a paragraph or two into the design document.
+Design documentation is not just the output of design work. It is a tool for exploring and resolving design problems. The act of explaining and justifying a design in writing helps reveal ambiguities, conflicting assumptions, and unresolved questions. Don't wait until the design is "finished" before writing it down or you will often discover that your design is much less "finished" than you realized.
 
-Solo work often involves fleshing out design to a high level of detail. There can be a question as to whether it is better work through the design through writing it down first or if doing prototyping and implementation first would be more efficient. One approach is to keep an eye on whichever activity seems easier at the moment. When you encounter a difficulty spike "find your way back to easy" and evaluate whether the issue would be better overcome by switching activities.
-
-When you encounter a difficulty, firstly consider if it stems from the **inherent complexity of the problem.** If so, try using design writing to document that complexity as a guide to help keep you from getting lost in the future. Sometimes this means writing down generic information about the domain. Other times it involves things more specific to the software being developed such as discovering and writing down previously unwritten requirements.
-
-Next, consider if a difficulty stems from **a clear gap or flaw in the software's solution to the problem.** If so, try using design writing to fill in or iterate on the current design. If a summary of the design is too complicated to explain in words how will you ever implement it? How will users ever understand it?
-
-If the issue doesn't fall under a category suited to working through via design writing consider prototyping instead. Perhaps you have reached a roadblock in undertsanding the problem space that would be better explored through experimentation. Or perhaps the design is clear but it is unclear whether it would actually work. During prototyping if the design you have written isn't holding your hand through, or at least justifying, the difficult parts of implementation, this can be a sign you haven't though through the design itself far enough yet and should consider switching back to design documentation writing.
+Design writing and code prototyping can both be exploratory tools, but they are effective at different things. Design writing is often more effective at working through ambiguities, assumptions, and open questions. This is because design writing allows you to work directly in the language of the problem domain. Code prototyping is often more useful for answering questions about whether a solution can be built. Testing a prototype is useful for answering questions about whether that solution actually achieves the desired outcome. When progress stalls, consider whether you are using the wrong tool for the question you are trying to answer.
 
 ## Format
 
-Organize the document such that it is meant to be read in order. Often this involves putting domain information and important vocabulary and definitions up front before diving into details.
+Arrange information in order such that later sections build on earlier sections. Often this means putting domain information and important definitions up front before diving into details.
 
 ### TBDs
-Use TBD (to be determined) to indicate details that need to be filled in. TBDs attempt to highlight design decisions that haven't been made yet in such a way that other work can continue without being held up. If A TBD involves multiple well-defined options, write down the options. TBDs can serve as an agenda for a design discussion or prompts for a design reviewer to write their opinion.
+Use TBD (to be determined) to indicate details that need to be filled in. TBDs are a mechanism for recording unresolved design questions without blocking the rest of the document. If A TBD involves multiple well-defined options, write down the options. TBDs can serve as an agenda for a design discussion or prompts for a design reviewer to write their opinion. Don't pretend the design is finished when it isn't.
 
 Examples:
 
@@ -57,10 +51,10 @@ Examples:
 > __TBD: Do we think this approach will be performant enough?__
 
 ## Rules of Thumb
-These are rules of thumb for keeping designs subjective and clear. Examples paraphrase real-life design review findings.
+These are rules of thumb for keeping designs objective and clear. Examples paraphrase common real-life design review findings.
 
 ### Rule of Nature
-What is the nature of a thing? *Defining* is clearer than *describing*.
+What is the nature of a thing? *Defining* is clearer than *describing*. Don't write requirements about the design. Write the design.
 
 Example:
 
@@ -73,7 +67,7 @@ Example:
 __Good: This layer also indicates the interface's connection state.__
 
 ### Rule of Opposites
-If the opposite of a statement seems nonsensical this may indicate that the original statement is making inappropriate subjective commentary. If commentary is truly needed it should be separated out.
+If the opposite of a statement would be nonsensical this often indicates that the original statement is making subjective commentary. Leave out such commentary to make the design easier to read and change.
 
 Example:
 
@@ -92,6 +86,8 @@ __Opposite: When this happens, the packet is rejected partially.__<br>
 __Good: When this happens, the packet is rejected.__
 	
 ### Rule of Uncertainty
+Describe behavior not possibilities.
+
 If it *can* or *should*, *will it*? 
 
 If it *will*, *when will it*?
