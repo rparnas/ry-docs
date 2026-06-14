@@ -12,7 +12,7 @@ The code exercise remains relatively standard though it was modified with some i
 ## Code Exercise
 * A code exercise is presented with a full spec including test inputs and outputs.
 * The candidate may not use AI and must screen share their IDE.
-* The candidate is informed that they may ask the interviewer any question (or that they should feel comfortable to think in silence if they desire). In practice, most questions have been clarifications about the prompt or discussions of the candidate's intended approach.
+* The candidate is informed that they may ask the interviewer any question (or that they should feel comfortable to think in silence if they desire). In practice, most questions have been regarding clarifications about the prompt or the candidate asking for basic feedback on whether their approach is reasonable befor they begin coding.
 * Aim for the code exercise to be about 30 minutes.
 * After the candidate runs their solution, spend 15 minutes asking them to speculate on how they would approach specific extensions to the problem like "What if the input also had to support X?"
 * The initial code problem demonstrates basic competence while the extension discussion demonstrates engineering judgment. LeetCode Medium problems were used as a starting point and custom extensions were added by the interviewer ahead of time.
@@ -44,7 +44,7 @@ This roleplay is open-ended. Candidates are evaluated not on reaching a specific
 
 * The interviewer should answer questions from the perspective of the stakeholder being roleplayed and provide definitive answers when that stakeholder would reasonably have them. The goal is not to withhold information, but to faithfully represent the knowledge, priorities, constraints, and plans that stakeholder would bring to a real feature discussion.
 
-* Strong candidates often begin by asking general questions about the product domain, customers, or development process, or by relating aspects of the scenario to their relevant past experience. In general, I do not count this up-front discussion against the time of the exercise because it is simply bringing forward discussion that would otherwise occur elsewhere later in the interview.
+* Strong candidates often begin by asking general questions about the product domain, customers, or development process, or by relating aspects of the scenario to their relevant past experience. In general, I do not count this up-front discussion against the time of the exercise because it is simply bringing forward general discussion that would otherwise occur elsewhere later in the interview.
 
 * Your process is not likely pure waterfall. If the candidate says something like "Actually, I would prototype aspect X to discover Y before I talk to Z" the interviewer can fast-forward and tell them the results of that exploration, letting the candidate continue from there.
 
