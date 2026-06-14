@@ -5,15 +5,27 @@ This document includes best practices for software design documents, for both us
 
 ## What should designs include
 
-Designs should include the **what** and the **why**. "What the software is" tends to remain relevant indefinately. "Why you made the decisions you made" becomes stale over time because past decisions were made under past conditions and past levels of domain expertise. Since these two elements expire at different rates, tend to keep them seperate. This can be as informal as just tending to keep them in seperate paragraphs.
+The purpose of design documentation is not just to document decisions and specifications, but to do so in such a way that facilitates future work.
 
-Define **what** the software is. Leave out subjective commentary in favor of providing a clear, easy-to-understand description. Let the reader judge the design on its own merits especially because the conditions may have changed since the design was made. The **what** can describe the software as it is intended to exist even if the current implementation isn't finished yet or has bugs. Those deficincies can be documented elsewhere such as in an issue tracker, code comment, or scheduled future task.
+Designs should include the **what** and the **why**. The **what** describes the software itself and remains relevant until changes are made. The **why** describes the conditions, assumptions, and reasoning that led to the design. Over time, conditions and assumptions change, causing that reasoning to become stale. Since **what** and **why** age at different rates, keep them separate.
 
-Describe **why** the design was chosen. Lead the reader down the path that led you to settle on the current design otherwise they will have to tediously re-discover that path on their own. In addition to background information about the software's domain, the **whys** often include arguments as to why the design shouldn't be changed. Include enough historical context so the reader may evaluate whether or not those arguments still make sense.
+When defining **what** the software is, leave out subjective commentary in favor of providing a clear description. Describe the design, don't argue for it. The **what** should describe behavior and structure that can ultimately be expressed in code and validated through testing.
 
-For example, if you tried the obvious solution first and it did not work, explain that. If you went with a sub-optimal design due to time contstraints include that information, along with a brief description of the optimal design you would have perferred to use.
+The **what** may describe the software as it is intended to exist even if the implementation is still in progress. Known gaps between the design and the implementation can be documented in an issue or task tracker, or in code comments.
 
-If you go far in exploring a design for something but eventually end up rejecting it, consider including a short sumary of the rejected design in a **Hall of Fame**. This section is a good place for information about features that no longer exist or for designs that would be cluttered if interspersed in sections about the current live design. Keep the **Hall of Fame** concise. If you're throwing out a five page design, perhaps pare it down to a one page summary. The goal is to educate readers with a concise and curated history of pivotal design decisions. Don't bombard them with a repository of raw notes.
+Describe **why** the design was chosen. Your rationale should preserve the reasoning process, not just the final conclusion. Lead the reader down the path that led you to settle on the current design. Include enough context so that a future reader who desires to make changes can evaluate which of your original arguments still make sense and which have become stale.
+
+The structure of the document should make it easy for a future reader to pick up where you left off. It should be easy to see how new knowledge and new assumptions should alter the reasoning and cascade into design changes. For example:
+
+"We first considered Design A. Design A would have been simpler, but it could not satisfy requirement X. Requirement X was considered mandatory because of Y. Therefore we chose Design B."
+
+...might be modified in the future to:
+
+"...Therefore we originally chose Design B. Version 2 of the underlying library satisfies Requirement X (which is still mandatory because of Y). Thus we were able to pivot back to Design A. This fixes the unexpected negative side-effects that Design B caused (including A, B, and C)."
+
+This example can be completed by replacing portions of the **what** section to match the pivot to design A.
+
+Keep your **whys** concise. An hour of discussion should often only generate a sentence or two of design rationale. Do not bombard future readers with a repository of raw notes.
 
 ## When should designs be written
 
