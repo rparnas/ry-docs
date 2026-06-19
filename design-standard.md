@@ -7,13 +7,13 @@ This document includes best practices for software design documents, for both us
 
 The purpose of design documentation is not just to document decisions and specifications, but to do so in such a way that facilitates future work.
 
-Designs should include the **what** and the **why**. The **what** describes the software itself and remains relevant until changes are made. The **why** describes the conditions, assumptions, and reasoning that led to the design. Over time, conditions and assumptions change, causing that reasoning to become stale. Since **what** and **why** age at different rates, keep them separate.
+Designs should include the *what* and the *why*. The *what* describes the software itself and remains relevant until changes are made. The *why* describes the conditions, assumptions, and reasoning that led to the design. Over time, conditions and assumptions change, causing that reasoning to become stale. Since *what* and *why* age at different rates, keep them separate.
 
-When defining **what** the software is, leave out subjective commentary in favor of providing a clear description. Describe the design, don't argue for it. The **what** should describe behavior and structure that can ultimately be expressed in code and validated through testing.
+When defining *what* the software is, leave out subjective commentary in favor of providing a clear description. Describe the design, don't argue for it. The *what* should describe behavior and structure that can ultimately be expressed in code and validated through testing.
 
-The **what** may describe the software as it is intended to exist even if the implementation is still in progress. Known gaps between the design and the implementation can be documented in an issue or task tracker, or in code comments.
+The *what* may describe the software as it is intended to exist even if the implementation is still in progress. Known gaps between the design and the implementation can be documented in an issue or task tracker, or in code comments.
 
-Describe **why** the design was chosen. Your rationale should preserve the reasoning process, not just the final conclusion. Lead the reader down the path that led you to settle on the current design. Include enough context so that a future reader who desires to make changes can evaluate which of your original arguments still make sense and which have become stale.
+Describe *why* the design was chosen. Your rationale should preserve the reasoning process, not just the final conclusion. Lead the reader down the path that led you to settle on the current design. Include enough context so that a future reader who desires to make changes can evaluate which of your original arguments still make sense and which have become stale.
 
 The structure of the document should make it easy for a future reader to pick up where you left off. It should be easy to see how new knowledge and new assumptions should alter the reasoning and cascade into design changes. For example:
 
@@ -23,9 +23,9 @@ The structure of the document should make it easy for a future reader to pick up
 
 "...Therefore we originally chose Design B. Version 2 of the underlying library satisfies Requirement X (which is still mandatory because of Y). Thus we were able to pivot back to Design A. This fixes the unexpected negative side-effects that Design B caused (including A, B, and C)."
 
-This example can be completed by replacing portions of the **what** section to match the pivot to design A.
+This example can be completed by replacing portions of the *what* section to match the pivot to design A.
 
-Keep your **whys** concise. An hour of discussion should often only generate a sentence or two of design rationale. Do not bombard future readers with a repository of raw notes.
+Keep your *whys* concise. An hour of discussion should often only generate a sentence or two of design rationale. Do not bombard future readers with a repository of raw notes.
 
 ## When should designs be written
 
