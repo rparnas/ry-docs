@@ -22,7 +22,7 @@ A software program depends on what it needs to "talk to".
 
 *Operating Systems* (*OS*) are one level above hardware. They manage the system and provide services to programs so that program developers don't have to reinvent the wheel for common things. Developers want to be able to say "draw the letter X" not "start at the top-left corner of the monitor and draw a white line at such and such angle..." Operating systems include **Linux**, **macOS**, and **Windows**.
 
-*API*s (*Application Programming Interfaces*) are how services are provided to programs. Some are part of the OS while others are distributed separately. OS services tend to be generic things needed by many programs whereas seperate APIs may provide specific things like 3D graphics. Examples of 3D graphics APIs include **DirectX**, **Metal**, and **Vulkan**.
+*API*s (*Application Programming Interfaces*) are how services are provided to programs. Some are part of the OS while others are distributed separately. OS services tend to be generic things needed by many programs whereas separate APIs may provide specific things like 3D graphics. Examples of 3D graphics APIs include **DirectX**, **Metal**, and **Vulkan**.
 
 Packages that provide large APIs, or bundles of related APIs, are sometimes referred to as software *libraries*. Game engines, such as **Unreal** and **Unity**, bundle multiple libraries and specialized APIs specific to game development. Technically, these packages are more than *just* APIs, but APIs are how programs talk to them. 
 
@@ -40,18 +40,18 @@ These layers *are not rigid*. Software programs may skip over and talk to lower 
 
 Some layers may not exist on some systems. On early game consoles, games often handled low-level things on their own and ran somewhat directly on the hardware.
 
-## Software Compatability Solutions
+## Software Compatibility Solutions
 Software program compatibility problems happen when they were written to work with a layer in a particular way but the layer has changed (or does not exist) on some system.
 
 Sometimes it is possible to *run the program directly* on the desired system by applying *patches* (an update that replaces parts of the program) or by setting a particular *configuration* (to make the program avoid doing incompatible things if the rest of the things it needs to do are compatible).
 
-*Compatability layers* are programs that translate some or all of a program's operations and API calls into a form that is runnable on the desired system. Examples include **Proton** or **Wine**.
+*Compatibility layers* are programs that translate some or all of a program's operations and API calls into a form that is runnable on the desired system. Examples include **Proton** or **Wine**.
 
-*Virtual machine*s (*VM*) are typically designed for apps that don't depend on "the behavior of particular hardware" but instead "depend on the behavior of a particular OS". They often have high proformance and focus on compatability with business apps rather than multimedia or games. Examples include **Hyper-V**, **VirtualBox** and **VMware Workstation**. **KVM** is a virtualization system on Linux but it is more of a "virtualization technology" that can be re-used by other projects and not a complete package.
+*Virtual machine*s (*VM*) are typically designed for apps that don't depend on "the behavior of particular hardware" but instead "depend on the behavior of a particular OS". They often have high proformance and focus on Compatibility with business apps rather than multimedia or games. Examples include **Hyper-V**, **VirtualBox** and **VMware Workstation**. **KVM** is a virtualization system on Linux but it is more of a "virtualization technology" that can be re-used by other projects and not a complete package.
 
-*Emulators* simulate hardware. An emulator may simulate specific real life hardware. Or it may simulate a single generic and predictable machine to avoid having to simulate the hundreds of variations among the machines that actually existed. Ideally, emulators let relevant OSes, APIs, and software programs run without any modifications just as they did on an original hardware. The more complex and accurate the hardware being simulated, the higher the CPU requirements of the emulator tend to be.
+*Emulators* simulate hardware. An emulator may simulate specific real-life hardware. Or it may simulate a single generic and predictable machine to avoid having to simulate the hundreds of variations among the machines that actually existed. Ideally, emulators let relevant OSes, APIs, and software programs run without any modifications just as they did on an original hardware. The more complex and accurate the hardware being simulated, the higher the CPU requirements of the emulator tend to be.
 
-Often whatever is simpliest is the best solution unless you have goals like to recreating a historic experience. Even "buy old hardware" should be considered as a solution for tricky or unsolved compatability problems.
+Often whatever is simplest is the best solution unless you have goals like to recreating a historic experience. Even "buy old hardware" should be considered as a solution for tricky or unsolved Compatibility problems.
 
 ## Mac Software
 
@@ -69,7 +69,7 @@ Macs are divided into eras based on the CPU architecture used by the machine. Ma
 *Apple Silicon Macs* were introduced in 2020 when Apple moved to its own ARM-based processor, like the one it already uses for its phones. A goal of this was to make the hardware of **iOS** and **macOS** devices more similar so that developers can more often create one solution and use it on both.
 
 ### Mac Emulators
-**Mini vMac** emulates early compact 68k Macs starting with the original "Macintosh" (later known as Macintosh 128K) thru the Macintosh 512K, Plus, SE, Classic. It prioritizes hardware accuracy and a historically authentic experience. **System 6** is a stable "final plateau" OS that can be run on this emulator whereas it may struggle with **System 7** just as the original hardware struggled. It has a reputation of being hard to use however that comes from the Macs it is emulating being harder to use in real life than later systems, not the emulator itself.
+**Mini vMac** emulates early compact 68k Macs starting with the original "Macintosh" (later known as Macintosh 128K) thru the Macintosh 512K, Plus, SE, Classic. It prioritizes hardware accuracy and a historically authentic experience. **System 6** is a stable "final plateau" OS that can be run on this emulator whereas it may struggle with **System 7** just as the original hardware struggled. It has a reputation of being hard to use however that comes from the Macs it is emulating being harder to use in real-life than later systems, not the emulator itself.
 
 **Basilisk II** emulates a powerful late-era 68k Mac similar to a Quadra, while **SheepShaver**, by the same developer, emulates a late-era PowerPC machine similar to a Power Mac. It prioritizes software compatibility and ease-of-use rather than realistically emulating specific hardware. These two emulators are excellent choices for software that is forgiving in terms of the hardware it can run on. **System 7** is a good plateau OS for either 68k or PowerPC software. For later PowerPC software, **Mac OS 9** (typically **Mac OS 9.0.4**) is often a good choice.
 
@@ -208,7 +208,7 @@ In determining the strategy for running a piece of old **Windows** software the 
 #### **Windows** Families
 The **DOS** family includes the original **MS-DOS** and extends through versions of **Windows** up to **Windows 3.1**. **MS-DOS** (aka **DOS**) was originally a stand-alone text-based OS introduced in 1981. **Windows** was introduced in 1985 and is a graphical environment that runs on top of **DOS** meaning OS duties are split between **DOS** and **Windows**. **DOS** handles booting, loading programs, managing memory, and communicating with hardware while **Windows** provides ways to do graphics, sound, printing, and multitasking. Applications that run directly in **Windows** from this era are called *Windows applications*. Users may exit **Windows** and run pure **DOS** in order to run *DOS applications*.
 
-The **Windows 9x** family includes **Windows 95**, **Windows 98**, and **Windows ME**. It spanned an era from 1995 to the early 2000s. These systems rely on **DOS** to start up the system. **Windows 9x** then loads and takes over most OS functions though **DOS** is still retained for use as a compatability layer.
+The **Windows 9x** family includes **Windows 95**, **Windows 98**, and **Windows ME**. It spanned an era from 1995 to the early 2000s. These systems rely on **DOS** to start up the system. **Windows 9x** then loads and takes over most OS functions though **DOS** is still retained for use as a Compatibility layer.
 
 The **Windows NT** family includes **Windows NT**, **Windows 2000**, **Windows XP**, and all subsequent versions of **Windows** including **Vista**, **7**, **8**, **10** and **11**. **NT** was built from scratch and was released in 1993. Its goals were to modernize **Windows** in terms of security, stability, and networking. It was initially marketed as a business-oriented OS. With the release of **Windows XP** in 2001, Microsoft ended the **9x** line and moved home and business users to **NT**.
 
@@ -221,7 +221,7 @@ The transition from 16-bit to 32-bit occurred gradually during the DOS, Windows 
 
 Modern versions of **Windows** are almost always 64-bit and remain highly compatible with 32-bit software. However, 16-bit software is no longer supported.
 
-Additionaly, one common complication is that the bitness of a program may differ from its installer. Some 32-bit applications may come with a 16-bit installer and the compatability solution is then to find a workaround for the installer. Once installed, the it may be possible to run the program normally.
+Additionally, one common complication is that the bitness of a program may differ from its installer. Some 32-bit applications may come with a 16-bit installer and the Compatibility solution is then to find a workaround for the installer. Once installed, the it may be possible to run the program normally.
 
 #### 3D
 In the first years after consumer 3D graphics cards went mainstream, roughly from 1996 to 2004, "how to do 3D" had not yet been completely standardized and many competing 3D technologies existed.
@@ -233,7 +233,7 @@ Programs built on technologies that evolved into today's graphics hardware, APIs
 #### Running Directly on Windows
 Some old **Windows** software can run directly on modern systems. This works surprisingly well for old **Windows 2000** and **Windows XP** software (or any later versions of NT **Windows**) and for some **Windows 9x** software. Productivity applications and 2D software are more likely to work than 3D games.
 
-Modern **Windows** includes a built-in compatibility mode. This is mostly behind-the-scenes configuration rather than a full compatability layer. Right-click on a program, click **Properties**, and go to the **Compatibility** tab. The effectiveness of these settings vary between applications. Compatability mode may be updated as part of various **Windows** updates. Software that once failed may later work (and vice versa).
+Modern **Windows** includes a built-in compatibility mode. This is mostly behind-the-scenes configuration rather than a full Compatibility layer. Right-click on a program, click **Properties**, and go to the **Compatibility** tab. The effectiveness of these settings varies between applications. Compatibility mode may be updated as part of various **Windows** updates. Software that once failed may later work (and vice versa).
 
 > Recommendations:
 > * For **Windows 95**, **Windows 98**, and especially **Windows XP** or later software, try running the application on modern Windows normally. If that fails, try compatibility mode.
@@ -247,7 +247,7 @@ Historically, VM software was a go-to solution for running **Windows XP**. Howev
 
 * **VMware Workstation Pro**: Historically the largest commercial desktop virtualization product. In 2024 it was released as freeware by its new owner Broadcom. It continues to recieve updates as of 2026. Although free, it is tough to download through Broadcom's labyrinthine website (which also requires account creation and registration). Older versions worked well with **XP**, but support has gradually declined. Issues such as audio distortion are common, and some users report needing to adjust advanced **VMware** security and compatibility settings to obtain acceptable performance.
 
-* **Hyper-V**: Microsoft's successor to **Virtual PC**, introduced in the **Windows 7** era. It is available only on Pro and Server editions of **Windows** and focuses on server and business applications. It is not a seperate program but a feature you can enable in **Windows** under **Turn Windows features on or off**. It is great for spinning up a modern OS for tech work but is not intended to run legacy desktop operating systems. If you attempt to set up an old OS, choose the **Generation 1** VM option and do not expect much documentation or community support.
+* **Hyper-V**: Microsoft's successor to **Virtual PC**, introduced in the **Windows 7** era. It is available only on Pro and Server editions of **Windows** and focuses on server and business applications. It is not a separate program but a feature you can enable in **Windows** under **Turn Windows features on or off**. It is great for spinning up a modern OS for tech work but is not intended to run legacy desktop operating systems. If you attempt to set up an old OS, choose the **Generation 1** VM option and do not expect much documentation or community support.
 
 > Recommendations: 
 > * VMs are most useful for modern OSes but still may work for some Windows XP software.
@@ -261,7 +261,7 @@ Historically, VM software was a go-to solution for running **Windows XP**. Howev
 
 **PCEm** is an emulator whose goal is to emulate PC hardware at low level with high accuracy. It achieved this for **DOS** and **Windows** era PCs and was actively developed from 2007 to 2020. A successor project, begun in 2016, is **86Box**. **86Box** has aggressively expanded the range of hardware that can emulated and has also taken on other improvements.
 
-The focus of **PCEm** and later **86Box** historically ended around the Pentium II era (when **Windows 9x** dominated). Pentium III and 4 systems have generally been outside of their project scope. Pentium III and 4 systems accompanied a rapid increase in PC hardware complexity and the rise of 3D tech. Accurately emulating this hardware requires substantially more work than earlier PC platforms, and emulating the increasingly fast CPUs would be very demanding. Because of this, there is a bit of an awkward compatability gap for late **Windows 98** and early **Windows XP** software, especially games built on dead-end 3D tech.
+The focus of **PCEm** and later **86Box** historically ended around the Pentium II era (when **Windows 9x** dominated). Pentium III and 4 systems have generally been outside of their project scope. Pentium III and 4 systems accompanied a rapid increase in PC hardware complexity and the rise of 3D tech. Accurately emulating this hardware requires substantially more work than earlier PC platforms, and emulating the increasingly fast CPUs would be very demanding. Because of this, there is a bit of an awkward Compatibility gap for late **Windows 98** and early **Windows XP** software, especially games built on dead-end 3D tech.
 
 > Recommendations:
 > * Try **DOSBox** first for almost any **DOS** program and for more simple **Windows 3.1** programs.
@@ -312,7 +312,7 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
 * Historically, most users relied on a single sound card to do both synthesizer music (MIDI) and sound. The setup above is a premium configuration where the Sound Blaster can be used for both sound and MIDI, but the Roland MT-32 is available to handle MIDI for programs that support it.
 * The Roland MT-32 was an expensive MIDI synthesizer popular with enthusiasts and game developers. Many classic DOS games include dedicated MT-32 support and are often considered to sound their best when using it. If you want a more typical mid-1990s setup, you can omit the MT-32 and use only the Sound Blaster.
 
-#### Important Information For Using The Emulated System 
+#### Important Information for Using the Emulated System 
 * Basic **DOS** commands and programs.
   - When navigating folders in **DOS** use `cd` to change directories like `cd C:\FOLDER\SUBFOLDER`.
   - To see what is in a directory, enter `dir`. To see only files with a particular name or file extension, wildcards can be used like `dir NAME*` for files starting with "Name", or `dir *.TXT` for files ending with `.TXT`.
@@ -332,8 +332,8 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
 * **DOS** configuration files.
   - `CONFIG.SYS`: Loads low-level drivers and configures **DOS** itself. 
   - `AUTOEXEC.BAT`: Runs commands automatically when **DOS** starts.
-  - These These files are normally located in `C:\`. Whenever making a change to either of these, you must reboot for them to take effect.
-  - Whenevere you run a setup or program it is a good idea to inspect these files to see what the setup has changed or added.
+  - These files are normally located in `C:\`. Whenever making a change to either of these, you must reboot for them to take effect.
+  - Whenever you run a setup or program it is a good idea to inspect these files to see what the setup has changed or added.
   - If you put `REM` at the beginning of a line, such as `REM MSCDEX.EXE /D:MSCD001`, that line will be ignored. `REM` stands for "remark". This can be useful for troubleshooting or temporarily disabling a driver or startup program while testing alternatives.
 * Basic **86Box** actions.
   - Press <kbd>Ctrl</kbd> + <kbd>End</kbd> to let your mouse escape being captured by the emulator window.
@@ -402,7 +402,7 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
 * The technique of moving drivers into unused portions of the memory space between 640 KB and 1 MB is called using *upper memory blocks* (UMBs).
 * Most programs work fine with drivers loaded into UMBs, though occasional compatibility issues can occur where a driver works normally in most cases but fails for a particular program. but fails for a particular program.
 * You can see what programs and drivers are currently running, and what types of memory they are consuming, by entering `mem /C`. 
-  - *Note which programs are using up conventional memory. If a program does not appear in the list, do not re-configure it to use UMBs. Some programs might run on startup to do minor testing and then exit without consuming any memory permanemntly*.
+  - *Note which programs are using up conventional memory. If a program does not appear in the list, do not re-configure it to use UMBs. Some programs might run on startup to do minor testing and then exit without consuming any memory permanently*.
 * Remember: whenever you make a change, you must reboot to see it take effect.
 * Here is how to move drivers and programs into UMBs:
   - Step 1. Ensure DOS memory management is enabled.
@@ -472,12 +472,12 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
 * Instead, create a virtual hard disk and put your data on it, then add it to the configuration of the simulated system.
 * In **Windows 11**
   - Press <kbd>Win</kbd> + <kbd>X</kbd> and select **Disk Management**.
-  - **BE CAREFUL: this includes your host machiens actual disks, do not touch those.**
+  - **BE CAREFUL: this includes your host machine's actual disks, do not touch those.**
   - Select **Action > Create VHD**
   - Save the `.vhd` somewhere on your disk.
-  - After it appears, right-click on the new disk, near the name of the disk, and click **Initialze**, and choose **MBR**.
+  - After it appears, right-click on the new disk, near the name of the disk, and click **Initialize**, and choose **MBR**.
   - Right-click the unallocated space and choose **New Simple Volume**, choose a drive letter, and format as **FAT32**.
   - Now you have a new virtual drive on your host machine where you can copy files.
   - When you are done copying files to the disk, go back to **Disk Management** right-click the disk and choose **Detach VHD**.
   - You may now add the disk to your **86Box** configuration.
-* You can also use thse on the **DOS** machine though the maximum size the `.vhd` may be is 2 GB on this system.
+* You can also use these on the **DOS** machine though the maximum size the `.vhd` may be is 2 GB on this system.
