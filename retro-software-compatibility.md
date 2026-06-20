@@ -1,7 +1,7 @@
 # Retro Software Compatibility
 
 ## Purpose
-This guide discusses practical techniques for running older software on modern computers.
+This guide discusses practical techniques for running older software on modern computers. It explains why compatibility problems happen in the first place and various practical solutions for solving them in different situations.
 
 The following are discussed, with detailed guides
   * **Classic Mac**
@@ -236,7 +236,9 @@ Some old **Windows** software can run directly on modern systems. This works sur
 Modern **Windows** includes a built-in compatibility mode. This is mostly behind-the-scenes configuration rather than a full Compatibility layer. Right-click on a program, click **Properties**, and go to the **Compatibility** tab. The effectiveness of these settings varies between applications. Compatibility mode may be updated as part of various **Windows** updates. Software that once failed may later work (and vice versa).
 
 > Recommendations:
-> * For **Windows 95**, **Windows 98**, and especially **Windows XP** or later software, try running the application on modern Windows normally. If that fails, try compatibility mode.
+> * For **Windows 95**, **Windows 98**, and especially **Windows XP** or later software, try running the application on modern Windows normally. 
+> * If that fails, try compatibility mode.
+> * If that fails, try searching for compatability patches or special configurations specific to the desired piece of software.
 
 #### Windows VMs
 A VM is an option if the main compatibility issue is that your software needs a specific operating system. VMs on modern **Windows** are primarily designed to support current versions of **Windows** and **Linux** because there is little business demand for running very old operating systems. When they work, VMs can run software much faster than full hardware emulators because they do not need to emulate an entire PC.
