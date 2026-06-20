@@ -1,7 +1,19 @@
 # Retro Software Compatibility
 
 ## Purpose
-Discusses techniques for running old software on modern systems. 
+This guide discusses practical techniques for running older software on modern computers.
+
+The following are discussed, with detailed guides
+  * **Classic Mac**
+  * **DOS**
+  * **Windows 3.1**
+  * **Windows 95/98**
+  * **Windows XP**
+
+The following are not currently covered
+  * **Apple II** software
+  * PowerPC **Mac OS X**
+  * Intel **Mac OS X**
 
 ## What Software Depends On
 A software program depends on what it needs to "talk to".
@@ -224,22 +236,25 @@ Some old **Windows** software can run directly on modern systems. This works sur
 Modern **Windows** includes a built-in compatibility mode. This is mostly behind-the-scenes configuration rather than a full compatability layer. Right-click on a program, click **Properties**, and go to the **Compatibility** tab. The effectiveness of these settings vary between applications. Compatability mode may be updated as part of various **Windows** updates. Software that once failed may later work (and vice versa).
 
 > Recommendations:
-> * Try running the application normally. If that fails, try compatability mode.
+> * For **Windows 95**, **Windows 98**, and especially **Windows XP** or later software, try running the application on modern Windows normally. If that fails, try compatibility mode.
 
 #### Windows VMs
-A VM is an option if the main compatability issue is that your software needs a specific older OS. **Windows** VMs tend to focus on supporting NT-based systems especially **Windows XP** and later. This is because there is little business demand for running earlier versions of **Windows**.
+A VM is an option if the main compatibility issue is that your software needs a specific operating system. VMs on modern **Windows** are primarily designed to support current versions of **Windows** and **Linux** because there is little business demand for running very old operating systems. When they work, VMs can run software much faster than full hardware emulators because they do not need to emulate an entire PC.
 
-* **Hyper-V**: Microsoft's successor to **Virtual PC**, introduced in the **Windows 7** era. It is available on Server or Pro editions of **Windows** and focuses heavily on server and business applications.
-* **VirtualBox**: A free, stable solution from Oracle that continues to receive incremental updates.
-* **VMware Workstation Pro**: Historically the largest commercial desktop virtualization product. In 2024 it was released as freeware by its new owner Broadcom. It continues to recieve updates as of 2026.
+Historically, VM software was a go-to solution for running **Windows XP**. However, support of **XP** has gradually declined as virtualization software and modern operating systems have moved on. **XP** is still easy to install on some VMs but features such as audio, graphics, and device integration may work imperfectly and require significant effort and experimentation to improve.
 
-If you want to try a VM, **VirtualBox** is a decent free generic solution, **VMWare** is a little more complicated and can provide a more polished experience especially for regular productivity applications, and **Hyper-V** is focused more on a business and sever audience, and effectiveness may vary for other purposes.
+* **VirtualBox**: A free, stable solution from Oracle that continues to receive incremental updates. This is by far the easiest to set up and is your best bet for trying to run **XP** (although 3D acceleration is not generally achievable with **XP**). **VirtualBox** has a feature called **unattended install** which will install the OS for you from its installation media. This often works well but you may with to disable it and go through the set up manual if you encounter problems.
 
-> Recommendations:
+* **VMware Workstation Pro**: Historically the largest commercial desktop virtualization product. In 2024 it was released as freeware by its new owner Broadcom. It continues to recieve updates as of 2026. Although free, it is tough to download through Broadcom's labyrinthine website (which also requires account creation and registration). Older versions worked well with **XP**, but support has gradually declined. Issues such as audio distortion are common, and some users report needing to adjust advanced **VMware** security and compatibility settings to obtain acceptable performance.
+
+* **Hyper-V**: Microsoft's successor to **Virtual PC**, introduced in the **Windows 7** era. It is available only on Pro and Server editions of **Windows** and focuses on server and business applications. It is not a seperate program but a feature you can enable in **Windows** under **Turn Windows features on or off**. It is great for spinning up a modern OS for tech work but is not intended to run legacy desktop operating systems. If you attempt to set up an old OS, choose the **Generation 1** VM option and do not expect much documentation or community support.
+
+> Recommendations: 
+> * VMs are most useful for modern OSes but still may work for some Windows XP software.
+>  Look elsewhere for solutions to run multimedia, 3D games, and very old software.
 > * Try **VirtualBox** for a lightweight and easy VM.
-> * Try **VMWare Workstation** for a more polished VM experience.
-> * Try **Hyper-V** for enterprise and server-oriented workloads. For other uses, expect to find less documentation and community support.
-> * Look elsewhere for solutions to run multimedia, 3D game, and very old software.
+> * Try **VMware Workstation** for a VM with more features.
+> * Try **Hyper-V** for enterprise, server, tech work-related workloads.
 
 #### Windows Emulators
 **DOSBox** is one of the most actively developed PC emulators. Its goal is to simulate a generic DOS-era PC that can run as many different software programs as possible (especially games). When you download and run **DOSBox**, the OS *just runs* with no need to set one up yourself. **DOSBox** can be tricky as far as getting particular applications to work, requiring you to either edit text configuration files manually or to download a separate frontend that lets you configure using a UI. Often, you can look up configuration guides for popular apps and games. Many retro game re-releases on stores like GOG and Steam are running **DOSBox** under-the-hood. It can also run early Windows programs (aka thru Windows 3.1) although compatibility is less good than for pure DOS applications.
@@ -248,7 +263,7 @@ If you want to try a VM, **VirtualBox** is a decent free generic solution, **VMW
 
 The focus of **PCEm** and later **86Box** historically ended around the Pentium II era (when **Windows 9x** dominated). Pentium III and 4 systems have generally been outside of their project scope. Pentium III and 4 systems accompanied a rapid increase in PC hardware complexity and the rise of 3D tech. Accurately emulating this hardware requires substantially more work than earlier PC platforms, and emulating the increasingly fast CPUs would be very demanding. Because of this, there is a bit of an awkward compatability gap for late **Windows 98** and early **Windows XP** software, especially games built on dead-end 3D tech.
 
-> Recommendations
+> Recommendations:
 > * Try **DOSBox** first for almost any **DOS** program and for more simple **Windows 3.1** programs.
 > * Try **86Box** for **DOS**, **Windows 3.1**, **Windows 95**, and **Windows 98** software, especially if you want to recreate the historic experience of setting up an old PC.
 > * Try a VM for **Windows XP** software after you have already tried running it directly on modern **Windows** first.
@@ -452,7 +467,7 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
   - **DirectX 6.1a** comes with **Windows 98 SE**.
 * When you want to shut down **Windows**, click the **Start** menu on the bottom-left and choose **Shut Down**
 
-#### Create Data Hard Disk Images (`.vhd`)
+#### Creating Data Hard Disk Images (`.vhd`)
 * If you have a large folder greater than the capacity of most CD dics (which usually top out at 650 or 700 MB), then you may have trouble trying to mount that folder as a virtual CD.
 * Instead, create a virtual hard disk and put your data on it, then add it to the configuration of the simulated system.
 * In **Windows 11**
