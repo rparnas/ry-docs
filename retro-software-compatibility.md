@@ -14,6 +14,7 @@ The following are not currently covered
   * **Apple II** software
   * PowerPC **Mac OS X**
   * Intel **Mac OS X**
+  * CD-ROM disc authentication and copy protection (especially late 90s to early 00s)
 
 ## What Software Depends On
 A software program depends on what it needs to "talk to".
