@@ -382,11 +382,9 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
 * DOS applications generally run in the first 640 KB of memory, called *conventional memory*. Drivers such as for the CD-ROM, mouse, and sound card also consume this limited space, causing some programs (especially games) to run out of the conventional memory. You might see this in the form of an "out of memory" error presented by the program.
 * The address space between 640 KB and 1 MB is reserved for hardware and system functions.
 * Some programs such as games need a lot of conventional memory. You can see what programs and drivers are currently running, and what types of memory they are consuming, by entering `mem /C`. 
-* If you encounter memory problems, there are two common approaches:
-  - Use memory-saving driver replacements that were written in modern times.
-  - Learn traditional **DOS** memory management.
+* If you encounter memory problems, there are two common approaches, see below.
 
-#### Memory-saving driver replacements
+##### Memory-saving approach 1: Driver replacements
 * This approach is commonly recommended by modern retro-computing guides. These drivers were designed to be smaller and more memory-efficient than many of the drivers that were commonly used during the DOS era. They could be run on real DOS hardware but were not part of a typical mainstream DOS setup.
 * For a smaller CD-ROM driver, use **Acer CDROM Universal ATAPI IDE Driver** (`VIDE-CDD.SYS`)
   - This usually comes as an installer, rather than a single file.
@@ -400,10 +398,10 @@ The focus of **PCEm** and later **86Box** historically ended around the Pentium 
   - Copy `SHSUCDX.COM` to `C:\DRIVERS\SHSUCDX.COM`
   - To use this, edit `AUTOEXEC.BAT` and replace references to `MSCDEX.EXE` with `SHSUCDX.COM`.
 
-#### Traditional DOS Memory Management
-* The 640 KB to 1 MB memory space is technically reserved by parts of it go unused and drivers (and other system programs) can be moved into this unused space in order to free up conventional memory for other applications.
-* The technique of moving drivers into unused portions of the memory space between 640 KB and 1 MB is called using *upper memory blocks* (UMBs).
-* Most programs work fine with drivers loaded into UMBs, though occasional compatibility issues can occur where a driver works normally in most cases but fails for a particular program. but fails for a particular program.
+##### Memory-saving approach 2: Traditional DOS Memory Management
+* The 640 KB to 1 MB memory space is technically reserved but parts of it go unused and drivers (and other system programs) can be moved into this unused space in order to free up conventional memory for other applications.
+* The technique of moving drivers into unused memory between 640 KB and 1 MB is called using *upper memory blocks* (UMBs).
+* Most programs work fine with drivers loaded into UMBs, though issues can occur. Most commonly a driver may work normally in most cases but fail for particular programs. but fails for a particular program.
 * You can see what programs and drivers are currently running, and what types of memory they are consuming, by entering `mem /C`. 
   - *Note which programs are using up conventional memory. If a program does not appear in the list, do not re-configure it to use UMBs. Some programs might run on startup to do minor testing and then exit without consuming any memory permanently*.
 * Remember: whenever you make a change, you must reboot to see it take effect.
