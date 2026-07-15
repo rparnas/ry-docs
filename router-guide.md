@@ -3,8 +3,8 @@
 ## Purpose
 Information about settings on my router. I use these ASUS models:
 
-- RT-AC86U
-- RT-AX86U
+- RT-AC86U (Wi-Fi 5)
+- RT-AX86U (Wi-Fi 6)
 
 ## Configuration
 
@@ -21,9 +21,9 @@ Information about settings on my router. I use these ASUS models:
   - **Professional > Roaming assistant:** **Disable**
     - Let clients decide when the signal is so weak they want to disconnect. Turning this setting on makes more sense when your network has multiple access points.
   - **Professional > Multi-User MIMO:** **Enabled**
-    - Wi-Fi 5+ feature where the router uses multiple antennas to communicate with multiple compatible devices simultaneously.
+    - Feature on Wi-Fi 5+ only, where the router uses multiple antennas to communicate with multiple compatible devices simultaneously.
   - **Professional > OFDMA/802.11ax MU-MIMO:** **DL/UL OFDMA + MU-MIMO**
-    - Wi-Fi 6 feature where the router intelligently divides the channel into smaller pieces so multiple compatible devices can communicate at the same time.
+    - Feature on Wi-Fi 6+ only, where the router intelligently divides the channel into smaller pieces so multiple compatible devices can communicate at the same time.
   - **Professional > Universal Beamforming:** **Disable**
     - Attempts to focus the transmitted signal toward older devices that don't explicitly support beamforming. Seems better to just communicate with such devices normally.
 - **IPv6** 
