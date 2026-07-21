@@ -5,6 +5,7 @@ Information about settings on my router. I use these ASUS models:
 
 - RT-AC86U (Wi-Fi 5)
 - RT-AX86U (Wi-Fi 6)
+- RT-BE86U (Wi-Fi 7)
 
 ## Configuration
 
@@ -31,6 +32,7 @@ Information about settings on my router. I use these ASUS models:
     - Doesn't necessarily cause issues but seems unecessary for now.
 - **Administration**
   - **System > Basic Config > Enable Reboot Scheduler:** **Yes**
-    - Consider setting a weekly reboot, for example at 4:00am Sunday.
+    - Consider setting a weekly reboot, for example at 3:00am Sunday.
   - **Firmware upgrade > Auto Firmware Upgrade:** **On**
+    - Set a Preferable Upgrade Time like 02:00am.
     - Automatically upgrades firmware.
